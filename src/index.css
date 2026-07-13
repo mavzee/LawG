@@ -1,0 +1,31 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5eee4;
+  background: #05090f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #05090f;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #05090f;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
