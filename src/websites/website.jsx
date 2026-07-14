@@ -1,7 +1,7 @@
-import firefighterImage from '../assets/firefighter.png'
+import firefighterImage from '../assets/fire.png'
 import logoIcon from '../assets/icon.png'
-import pfasImage from '../assets/pfas.webp'
-import webChemImage from '../assets/web_chem.webp'
+import pfasImage from '../assets/epa.png'
+import webChemImage from '../assets/kits.png'
 import './website.css'
 
 const websites = [
