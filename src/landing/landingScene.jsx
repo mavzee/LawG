@@ -152,11 +152,20 @@ function getMotion(progress) {
 
 function ArchitectureBackdrop() {
 	const texture = useLoader(THREE.TextureLoader, backgroundImage)
+	const backdropRef = useRef()
 	texture.colorSpace = THREE.SRGBColorSpace
+
+	useFrame((state) => {
+		if (!backdropRef.current) return
+		const t = state.clock.elapsedTime
+		backdropRef.current.position.x = Math.sin(t * 0.25) * 0.28
+		backdropRef.current.position.y = Math.sin(t * 0.18) * 0.12
+		backdropRef.current.rotation.z = Math.sin(t * 0.22) * 0.02
+	})
 
 	return (
 		<>
-			<mesh position={[0, 0, -9]}>
+			<mesh ref={backdropRef} position={[0, 0, -9]}>
 				<planeGeometry args={[30, 20]} />
 				<meshBasicMaterial map={texture} color="#777777" toneMapped={false} />
 			</mesh>

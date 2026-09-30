@@ -1,4 +1,5 @@
 import FilesSection from '../Files/files'
+import MemberSection from '../members/member'
 import logoIcon from '../assets/icon.png'
 import WebsitesSection from '../websites/website'
 import LandingScene from './landingScene'
@@ -111,6 +112,7 @@ export default function Landing() {
 
       <WebsitesSection />
       <FilesSection />
+      <MemberSection />
     </main>
   )
 }
