@@ -2,12 +2,12 @@
   --member-bg: #111315;
   --member-surface: rgba(18, 20, 22, 0.96);
   --member-panel: rgba(27, 30, 33, 0.9);
-  --member-panel-border: rgba(242, 112, 73, 0.22);
+  --member-panel-border: rgba(232, 188, 92, 0.7);
   --member-text: #f7f2ee;
   --member-muted: rgba(247, 242, 238, 0.7);
-  --member-accent: #f27049;
-  --member-accent-soft: rgba(242, 112, 73, 0.16);
-  --member-accent-light: #ffb295;
+  --member-accent: #e8b85d;
+  --member-accent-soft: rgba(232, 184, 93, 0.22);
+  --member-accent-light: #f7d58d;
 }
 
 .member-section {
@@ -23,12 +23,12 @@
   z-index: 0;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 18%, rgba(196, 142, 79, 0.12), transparent 18%),
-    radial-gradient(circle at 52% 26%, rgba(196, 142, 79, 0.08), transparent 15%),
-    radial-gradient(circle at 78% 38%, rgba(196, 142, 79, 0.09), transparent 18%),
-    radial-gradient(circle at 35% 58%, rgba(196, 142, 79, 0.08), transparent 16%),
-    radial-gradient(circle at 72% 70%, rgba(196, 142, 79, 0.09), transparent 20%),
-    radial-gradient(circle at 45% 85%, rgba(196, 142, 79, 0.08), transparent 17%),
+    radial-gradient(circle at 15% 18%, rgba(232, 184, 93, 0.2), transparent 18%),
+    radial-gradient(circle at 52% 26%, rgba(232, 184, 93, 0.14), transparent 15%),
+    radial-gradient(circle at 78% 38%, rgba(232, 184, 93, 0.16), transparent 18%),
+    radial-gradient(circle at 35% 58%, rgba(232, 184, 93, 0.12), transparent 16%),
+    radial-gradient(circle at 72% 70%, rgba(232, 184, 93, 0.14), transparent 20%),
+    radial-gradient(circle at 45% 85%, rgba(232, 184, 93, 0.12), transparent 17%),
     linear-gradient(90deg, rgba(18, 20, 22, 0.84) 0%, rgba(15, 17, 19, 0.92) 100%);
   pointer-events: none;
 }
@@ -40,15 +40,16 @@
   left: 0;
   right: 0;
   top: 0;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(242, 112, 73, 0.82) 12%,
-    rgba(242, 112, 73, 0.82) 50%,
-    rgba(242, 112, 73, 0.82) 88%,
+    rgba(247, 213, 141, 0.9) 12%,
+    rgba(247, 213, 141, 0.9) 50%,
+    rgba(247, 213, 141, 0.9) 88%,
     transparent 100%
   );
+  box-shadow: 0 0 22px rgba(247, 213, 141, 0.35);
   pointer-events: none;
 }
 
@@ -82,8 +83,8 @@
   width: 52px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--member-accent), rgba(242, 112, 73, 0.2));
-  box-shadow: 0 0 12px rgba(242, 112, 73, 0.4);
+  background: linear-gradient(90deg, var(--member-accent), rgba(247, 213, 141, 0.38));
+  box-shadow: 0 0 18px rgba(247, 213, 141, 0.7);
 }
 
 .member-heading h2 {
@@ -122,10 +123,11 @@
 
 .member-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(242, 112, 73, 0.46);
+  border-color: rgba(247, 213, 141, 0.96);
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.36),
-    0 0 0 1px rgba(242, 112, 73, 0.08);
+    0 0 0 1px rgba(247, 213, 141, 0.18),
+    0 0 24px rgba(247, 213, 141, 0.24);
 }
 
 .member-photo-wrap {
@@ -140,7 +142,7 @@
   position: absolute;
   inset: auto 0 0;
   height: 38%;
-  background: linear-gradient(180deg, transparent, rgba(10, 12, 15, 0.7));
+  background: linear-gradient(180deg, rgba(214, 161, 77, 0.05), rgba(10, 12, 15, 0.7));
 }
 
 .member-photo {
