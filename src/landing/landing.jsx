@@ -1,7 +1,7 @@
 import FilesSection from '../Files/files'
-import backgroundImage from '../assets/background.webp'
 import logoIcon from '../assets/icon.png'
 import WebsitesSection from '../websites/website'
+import LandingScene from './landingScene'
 import './landing.css'
 
 const navItems = [
@@ -13,13 +13,9 @@ const navItems = [
 export default function Landing() {
   return (
     <main className="landing-shell">
-      <section
-        id="home"
-        className="landing-hero"
-        style={{
-          '--landing-background': `url(${backgroundImage})`,
-        }}
-      >
+      <LandingScene />
+
+      <section id="home" className="landing-hero">
         <div className="landing-overlay" aria-hidden="true" />
 
         <header className="landing-nav">
@@ -94,9 +90,6 @@ export default function Landing() {
         </div>
 
         <div className="hero-decoration" aria-hidden="true">
-          <div className="orange-orb orange-orb-one" />
-          <div className="orange-orb orange-orb-two" />
-
           <div className="light-beam beam-one" />
           <div className="light-beam beam-two" />
 

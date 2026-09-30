@@ -1,5 +1,6 @@
 .files-section {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   padding: 108px 24px 120px;
   background:
@@ -8,7 +9,12 @@
       rgba(242, 112, 73, 0.08),
       transparent 24%
     ),
-    linear-gradient(180deg, #101214 0%, #16191c 48%, #111315 100%);
+    linear-gradient(
+      180deg,
+      rgba(16, 18, 20, 0.88) 0%,
+      rgba(22, 25, 28, 0.78) 48%,
+      rgba(17, 19, 21, 0.9) 100%
+    );
 }
 
 .files-section::before {

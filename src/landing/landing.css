@@ -32,10 +32,12 @@ button {
 }
 
 .landing-shell {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(
       circle at 82% 15%,
@@ -45,8 +47,20 @@ button {
     #111315;
 }
 
+.landing-scene {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.landing-scene canvas {
+  display: block;
+}
+
 .landing-hero {
   position: relative;
+  z-index: 1;
   isolation: isolate;
   display: flex;
   flex-direction: column;
@@ -54,9 +68,7 @@ button {
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
-  background:
-    var(--landing-background) center 35% / cover no-repeat,
-    #111315;
+  background: transparent;
   animation: heroAppear 900ms ease both;
 }
 
@@ -219,7 +231,7 @@ button {
 
 .landing-links a {
   position: relative;
-  padding: 38px 0 35px;
+  padding: 24px 0 16px;
   color: rgba(255, 247, 242, 0.72);
   font-size: 0.69rem;
   font-weight: 700;
@@ -249,7 +261,7 @@ button {
   content: '';
   position: absolute;
   right: 0;
-  bottom: -1px;
+  bottom: 6px;
   left: 0;
   height: 2px;
   background: linear-gradient(
@@ -548,38 +560,6 @@ button {
   pointer-events: none;
 }
 
-.orange-orb {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(242, 112, 73, 0.18);
-  background: radial-gradient(
-    circle at 36% 30%,
-    rgba(255, 154, 118, 0.2),
-    rgba(242, 112, 73, 0.06) 48%,
-    transparent 70%
-  );
-  box-shadow:
-    inset 0 0 60px rgba(242, 112, 73, 0.05),
-    0 0 70px rgba(242, 112, 73, 0.05);
-}
-
-.orange-orb-one {
-  right: -90px;
-  top: 13%;
-  width: 360px;
-  height: 360px;
-  animation: orbFloatOne 8s ease-in-out infinite alternate;
-}
-
-.orange-orb-two {
-  right: 18%;
-  bottom: -180px;
-  width: 310px;
-  height: 310px;
-  opacity: 0.6;
-  animation: orbFloatTwo 10s ease-in-out infinite alternate;
-}
-
 .light-beam {
   position: absolute;
   top: -20%;
@@ -810,26 +790,6 @@ button {
   }
 }
 
-@keyframes orbFloatOne {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(-26px, 28px, 0);
-  }
-}
-
-@keyframes orbFloatTwo {
-  from {
-    transform: translate3d(0, 0, 0) scale(0.94);
-  }
-
-  to {
-    transform: translate3d(24px, -25px, 0) scale(1.05);
-  }
-}
-
 @keyframes beamOne {
   from {
     transform: rotate(17deg) translateX(-20px);
@@ -918,11 +878,6 @@ button {
     font-size: clamp(3rem, 11vw, 5.2rem);
   }
 
-  .orange-orb-one {
-    right: -190px;
-    opacity: 0.55;
-  }
-
   .scroll-indicator {
     display: none;
   }
@@ -937,7 +892,7 @@ button {
   }
 
   .landing-hero {
-    background-position: 62% center;
+    min-height: 100svh;
   }
 
   .landing-overlay {
@@ -1028,15 +983,6 @@ button {
     display: none;
   }
 
-  .orange-orb-one {
-    top: 30%;
-    right: -230px;
-  }
-
-  .orange-orb-two {
-    right: -120px;
-    bottom: -150px;
-  }
 }
 
 @media (max-width: 390px) {
