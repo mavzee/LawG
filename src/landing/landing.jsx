@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'Our Sites', href: '#platforms' },
   { label: 'Files', href: '#files' },
+  { label: 'Our Staff', href: '#staff' },
 ]
 
 export default function Landing() {
