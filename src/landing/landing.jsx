@@ -1,12 +1,15 @@
 import FilesSection from '../Files/files'
 import backgroundImage from '../assets/background.webp'
 import logoIcon from '../assets/icon.png'
+import Footer from '../footer/footer'
+import MemberSection from '../members/member'
 import WebsitesSection from '../websites/website'
 import './landing.css'
 
 const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'Our Sites', href: '#platforms' },
+  { label: 'Staff', href: '#staff' },
   { label: 'Files', href: '#files' },
 ]
 
@@ -118,6 +121,8 @@ export default function Landing() {
 
       <WebsitesSection />
       <FilesSection />
+      <MemberSection />
+      <Footer />
     </main>
   )
 }
